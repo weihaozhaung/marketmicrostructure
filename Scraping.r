@@ -7,7 +7,7 @@ setwd("C:/Users/Eric/Desktop/FinanceManagement/MicroMarket/crawl_Data")
 stock_list=c(1201,1203,1210,1215,1216,1217,
              1218,1219,1220,1225,1227,1229) %>%as.character()
 
-#一樣所以可以不用改
+#stock target
 stock_subset1=c(1201,1203,1210,1215,1216,1217,
              1218,1219,1220,1225,1227,1229) %>%as.character()
 # stock_list_2=c()%>%as.character()
@@ -17,6 +17,7 @@ for(iy in stock_list){
   if(iy%in%stock_subset1){y=5}
 # else if(iy%in%stock_subset2){y=6}
 
+#Yahoo finance intraday stock price
 html_txt <- read_html(paste0("https://tw.stock.yahoo.com/q/ts?s=",iy,"&t=50"),encoding = "big5")
 tag_table <- html_nodes(html_txt,"td")
 stock_data=data.frame()
