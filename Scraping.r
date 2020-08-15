@@ -58,8 +58,10 @@ write.csv(stock_data,paste0("Stock_",iy,"_",
   # print(paste0(Sys.time(),"......","OK!"))
   
 }
-devtools::install_github("PMassicotte/gtrendsR")
+
 #library(gtrendsR)
+
+#Google Trend
 gtrendsR::gtrends(keyword = 'cat', geo = "US", time = "2010-01-01 2010-04-03",gprop = 'web',onlyInterest = TRUE)
 gtrendsR::gtrends(keyword = "Superbowl", geo = "US", time = "2017-12-10 2018-01-20",onlyInterest = TRUE)
 plot(gtrendsR::gtrends(keyword = "Superbowl", geo = "US", time = "2017-12-10 2018-01-20"))
