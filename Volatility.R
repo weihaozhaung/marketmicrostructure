@@ -13,7 +13,7 @@ setwd("C:/Users/Eric/Desktop/FinanceManagement/MicroMarket/HW5/Data")
 
 Files = list.files()
 
-#=========VPIN==========#
+#=========realized volatility==========#
 cl = makeCluster(7)
 registerDoSNOW(cl)
 pb <- txtProgressBar(max = length(Files), style = 3)
